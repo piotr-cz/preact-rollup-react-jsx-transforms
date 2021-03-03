@@ -1,0 +1,20 @@
+{
+  "name": "preact-rollup-react-jsx-transforms",
+  "version": "1.0.0",
+  "description": "Preact with 3p packages using JSX syntax",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piotr-cz/preact-rollup-react-jsx-transforms.git"
+  },
+  "author": "Piotr Konieczny <hello@piotr.cz> (https://www.piotr.cz)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/piotr-cz/preact-rollup-react-jsx-transforms/issues"
+  },
+  "homepage": "https://github.com/piotr-cz/preact-rollup-react-jsx-transforms#readme"
+}
