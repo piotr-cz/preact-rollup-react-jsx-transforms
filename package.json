@@ -7,6 +7,8 @@
   "scripts": {
     "start": "rollup --config --environment NODE_ENV:development --watch",
     "build": "rollup --config --environment NODE_ENV:production",
+    "start:with-workarounds": "rollup --config rollup.config.with-workarounds.js --environment NODE_ENV:development --watch",
+    "build:with-workarounds": "rollup --config rollup.config.with-workarounds.config.js --environment NODE_ENV:production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +30,7 @@
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.2",
     "@rollup/plugin-node-resolve": "^11.2.0",
+    "@rollup/plugin-replace": "^2.4.1",
     "rollup": "^2.40.0",
     "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-static-files": "^0.2.0"
