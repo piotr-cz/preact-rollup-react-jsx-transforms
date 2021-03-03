@@ -1,2 +1,5 @@
-dist/
-node_modules/
+# Build
+/build
+
+# Vendor packages
+/node_modules/
