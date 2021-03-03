@@ -2,6 +2,7 @@
 import rollupPluginNodeResolve from '@rollup/plugin-node-resolve'
 import rollupPluginAlias from '@rollup/plugin-alias'
 import rollupPluginReplace from '@rollup/plugin-replace'
+import rollupPluginVirtual from '@rollup/plugin-virtual'
 
 // 3p
 import rollupPluginStaticFiles from 'rollup-plugin-static-files'
@@ -29,7 +30,16 @@ export default {
         // See https://preactjs.com/guide/v10/getting-started#aliasing-react-to-preact
         { find: 'react', replacement: 'preact/compat' },
         { find: 'react-dom', replacement: 'preact/compat' },
+        // Override shady babel raw jsx helper
+        { find: '@babel/runtime/helpers/esm/jsx', replacement: 'babelJsxRuntimeHelperShim' },
       ]
+    }),
+    rollupPluginVirtual({
+      // For preact <10.5 use preact#createElement
+      'babelJsxRuntimeHelperShim': `
+        import { jsx } from 'preact/jsx-runtime';
+        export default (type, props, key, children) => jsx(type, { ...props, children }, key);
+      `,
     }),
     rollupPluginReplace({
       // Replace global with globalThis/ window
