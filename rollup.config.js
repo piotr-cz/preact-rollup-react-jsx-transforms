@@ -1,5 +1,6 @@
 // Rollup
 import rollupPluginNodeResolve from '@rollup/plugin-node-resolve'
+import rollupPluginAlias from '@rollup/plugin-alias'
 
 // 3p
 import rollupPluginStaticFiles from 'rollup-plugin-static-files'
@@ -17,6 +18,13 @@ export default {
     sourcemap: true,
   },
   plugins: [
+    rollupPluginAlias({
+      entries: [
+        // See https://preactjs.com/guide/v10/getting-started#aliasing-react-to-preact
+        { find: 'react', replacement: 'preact/compat' },
+        { find: 'react-dom', replacement: 'preact/compat' },
+      ]
+    }),
     rollupPluginNodeResolve(),
     // Copy static files
     rollupPluginStaticFiles({ include: ['./public'] }),
