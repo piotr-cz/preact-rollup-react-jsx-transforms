@@ -3,6 +3,8 @@ import 'preact/debug'
 import { html } from 'htm/preact'
 import { render } from 'preact'
 
+import { CacheProvider } from 'rest-hooks'
+
 /**
  * App component
  */
@@ -13,6 +15,10 @@ function App (props) {
 }
 
 render(
-  html`<${App} name="world" />`,
+  html`
+    <${CacheProvider}>
+      <${App} name="world" />
+    </${CacheProvider}>
+  `,
   document.getElementById('root')
 )

@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/piotr-cz/preact-rollup-react-jsx-transforms#readme",
   "dependencies": {
+    "@rest-hooks/rest": "^1.0.4",
     "htm": "^3.0.4",
-    "preact": "^10.5.12"
+    "preact": "^10.5.12",
+    "rest-hooks": "^5.0.8"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.2",
