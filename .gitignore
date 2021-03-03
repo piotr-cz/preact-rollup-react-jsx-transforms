@@ -2,4 +2,17 @@
 /build
 
 # Vendor packages
-/node_modules/
+/node_modules/**/*
+# Unignore
+!/node_modules/@rest-hooks/
+!/node_modules/@rest-hooks/core/
+!/node_modules/@rest-hooks/core/lib/
+!/node_modules/@rest-hooks/core/lib/react-integration/
+!/node_modules/@rest-hooks/core/lib/react-integration/provider/
+!/node_modules/@rest-hooks/core/lib/react-integration/provider/CacheProvider.js
+# Unignore
+!/node_modules/@babel/
+!/node_modules/@babel/runtime/
+!/node_modules/@babel/runtime/helpers/
+!/node_modules/@babel/runtime/helpers/esm/
+!/node_modules/@babel/runtime/helpers/esm/jsx.js

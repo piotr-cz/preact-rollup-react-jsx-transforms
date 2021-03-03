@@ -22,12 +22,13 @@
   },
   "homepage": "https://github.com/piotr-cz/preact-rollup-react-jsx-transforms#readme",
   "dependencies": {
-    "@rest-hooks/rest": "^1.0.4",
+    "@rest-hooks/rest": "1.0.4",
     "htm": "^3.0.4",
     "preact": "^10.5.12",
-    "rest-hooks": "^5.0.8"
+    "rest-hooks": "5.0.8"
   },
   "devDependencies": {
+    "@babel/runtime": "7.13.9",
     "@rollup/plugin-alias": "^3.1.2",
     "@rollup/plugin-node-resolve": "^11.2.0",
     "@rollup/plugin-replace": "^2.4.1",
