@@ -8,7 +8,7 @@ React packages generally use [Babel](https://babeljs.io/) to transpile react cod
 This may not work when project uses [Preact](http://preactjs.com/) and build pipeline is based on [Rollup](https://rollupjs.org/) especially when vendor packages use JSX syntax.
 
 
-For evaluation needs the [resthooks.io](https://resthooks.io/) package is used.
+For evaluation needs the [resthooks.io](https://resthooks.io/) (rest-hooks v5.0.8 + @rest-hooks/rest v1.0.4) package is used.
 
 
 ## Goals
@@ -29,6 +29,8 @@ For evaluation needs the [resthooks.io](https://resthooks.io/) package is used.
   ```
 
 - Open <http://localhost:3000>
+  
+  There should be a message _Hello world_ shown on screen
 
 
 ## Issues
